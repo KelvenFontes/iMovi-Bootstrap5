@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>iHome</title>
+        <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https: //fonts.googleapis.com/css2? família= Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900 &family= Roboto:wght@300;400;700 & display=swap" rel="stylesheet">
+
+        <!-- CSS Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+        <!-- Bootstrap icons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="../css/style.css">
+        <link rel="stylesheet" href="../css/login.css">
+
+        <!-- JavaScript Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg fixed-top bg-primary-color" id="navbar">
+            <div class="container py-3">
+                <a href="#" class="navbar-brand primary-color">
+                    <img src="../img/imovi-icon.png" alt="iMovi">
+                    <span>iHome</span>
+                </a>
+                <button 
+                    class="navbar-toggler" 
+                    type="button" 
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbar-items"
+                    aria-controls="navbar-items"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <i class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active primary-color" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./html/imoveis.html" class="nav-link primary-color" aria-current="page">Imóveis</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container" id="cadastro">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-12 text-center" id="title">
+                        <h2>Cadastre-se e acesse milhares de vagas</h2>
+                        <h3>Encontre o emprego dos seus sonhos</h3>
+                    </div>
+
+                    <div class="col-12 col-md-7" id="image">
+                        <img src="./img/telaCadastro.webp" alt="" class="d-block w-100">
+                    </div>
+                    
+                    <div class="col-12 col-md-4 text-center" id="formCadastro">
+                            
+                        <form>
+
+                            <div>
+                                <input type="text" id="firstName" class="input" required>
+                                <label for="name" id="nameLabel" class="input-label">Primeiro nome</label>
+                            </div>
+
+                            <div>
+                                <input type="text" id="lastName" class="input" required>
+                                <label for="name" class="input-label">Sobrenome</label>
+                            </div>
+
+                            <div>
+                                <input type="text" id="username" class="input" required>
+                                <label for="cpf" class="input-label">Nome de usuário</label>
+                            </div>
+
+                            <div>
+                                <input type="text" id="cpf" class="input" required>
+                                <label for="cpf" class="input-label">CPF</label>
+                            </div>
+                        
+                            <div>
+                                <input type="email" id="email" class="input" required>
+                                <label for="name" class="input-label">Email</label>
+                            </div>
+
+                            
+                            <!-- <div>
+                                <input type="text" id="CEP" class="input" required>
+                                <label for="name" class="input-label">CEP</label>
+                            </div>
+
+                            <div>
+                                <input type="text" id="cidade" class="input" required>
+                                <label for="name" class="input-label">Cidade</label>
+                            </div>
+
+                            <div>
+                                <input type="text" id="estado" class="input" required>
+                                <label for="name" class="input-label">Estado</label>
+                            </div> -->
+
+                            <div>
+                                <input type="text" id="senha" class="input" required>
+                                <label for="name" class="input-label">Senha</label>
+                            </div>
+
+                            <!-- <div>
+                                <input type="text" id="confirmarSenha" class="input" required>
+                                <label for="name" class="input-label">Comfirmar senha</label>
+                            </div> -->
+
+                            <button type="submit" id="btnSubmit">Cadastre-se</button>
+
+                        </form>
+
+                        <!-- <p>Cadastrar com:</p>
+                        <i class="bi bi-google"></i>
+                        <i class="bi bi-facebook"></i> -->
+
+                        <!-- <p>Você é empresa <a href="./cadastro.html">cadastre-se gratis aqui.</a></p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="" id="cadastro">
+            <div class="">
+                <form>
+
+                    <label for="">Qual é o tipo do seu imovel ?</label>
+                    <br>
+                    <select name="imovel" id="selectImovel">
+                        <option value="aparente">teste</option> <!-- deixar sem selecionar -->
+                        <option value="casa">Casa</option>
+                        <option value="apartamento">Apartamento</option>
+                    </select>
+
+                    <br>
+
+                    <label for="">quantidade quartos</label>
+                    <br>
+                    <select name="imovel" id="selectImovel">
+                        <option value="casa">1</option>
+                        <option value="apartamento">2</option>
+                    </select>
+
+                    <br>
+
+                    <label for="">Vagas de Carro</label>
+                    <br>
+                    <select name="imovel" id="selectImovel">
+                        <option value="casa">sim</option>
+                        <option value="apartamento">Não</option>
+                    </select>
+
+                    <br>
+
+                    <label for="">Rua</label>
+                    <br>
+                    <input type="text">
+                    <br>
+
+                    <label for="">Numero°</label>
+                    <br>
+                    <input type="text">
+                    <br>
+
+                    <label for="">cidade</label>
+                    <br>
+                    <input type="text">
+                    <br>
+
+                    <label for="">Estado</label>
+                    <br>
+                    <input type="text">
+                    <br>
+
+                    <div id="modify">
+                        
+                    </div>
+
+                    
+                    <label for="">imagem</label>
+                    <br>
+                    <input type="file">
+
+                    <br>
+
+                    
+                    <label for="">Valor</label>
+                    <br>
+                    <input type="text">
+
+                    <button type="submit">Criar anuncio</button>
+
+                </form>
+
+            </div>
+        </div>
+
+        <script>
+
+            function logar(){
+
+                let httpAPI = fetch(`http://34.203.27.186:8090/api/v1/user?username=${username.value}`)
+                    .then(response => {
+                        if(!reponse.ok){
+                            throw new Error("Erro na Solicitação")
+                        }
+                        return response.json();
+                    })
+                    .then(response =>{
+                        let obj = response["data"][0];
+                        console.log(obj['username']);
+                    })
+                    .catch(error => {
+                        console.log(error);
+                        alert("Houve um erro ao realizar o Processo. Tente Novamente")
+                    })
+                
+            }
+
+
+
+
+
+
+
+
+
+            // class Imovel {
+            //     constructor(qtdQuart){
+            //         this.quartos(qtdQuart);
+            //     }
+
+            //     quartos(qtd){
+            //         if(qtd == 1){
+            //             console.log('1 quartos')
+            //         } else{
+            //             console.log('+ quartos')
+            //         }
+            //     }
+
+            // }
+
+            // class Casa extends Imovel{
+
+            //     constructor(){
+            //         super();
+            //         this.initialize();
+            //     }
+
+                
+            //     initialize(teste){
+            //         let modify = document.querySelector('#modify');
+
+            //         modify.innerHTML= 
+            //         `
+            //             <label for="">quintal</label>
+            //             <br>
+            //             <select name="imovel" id="selectImovel">
+            //                 <option value="casa">1</option>
+            //                 <option value="apartamento">2</option>
+            //             </select>
+            //         `;
+
+            //     }
+
+            // }
+
+            // class Apartamento extends Imovel{
+
+            //     constructor(){
+            //         super();
+            //         this.initialize();
+            //     }
+
+
+            //     initialize(teste){
+            //         let modify = document.querySelector('#modify');
+
+            //         modify.innerHTML= 
+            //         `
+            //             <label for="">condominio</label>
+            //             <br>
+            //             <select name="imovel" id="selectImovel">
+            //                 <option value="casa">1</option>
+            //                 <option value="apartamento">2</option>
+            //             </select>
+
+            //             <br>
+
+            //             <label for="">apto</label>
+            //             <br>
+            //             <select name="imovel" id="selectImovel">
+            //                 <option value="casa">1</option>
+            //                 <option value="apartamento">2</option>
+            //             </select>
+
+            //             <br>
+
+            //             <label for="">bloco</label>
+            //             <br>
+            //             <select name="imovel" id="selectImovel">
+            //                 <option value="casa">1</option>
+            //                 <option value="apartamento">2</option>
+            //             </select>
+
+            //             <br>
+
+            //             <label for="">N° apto</label>
+            //             <br>
+            //             <select name="imovel" id="selectImovel">
+            //                 <option value="casa">1</option>
+            //                 <option value="apartamento">2</option>
+            //             </select>
+
+            //             <br>
+
+            //             <label for="">valor do condominio</label>
+            //             <br>
+            //             <input type="text">
+
+            //         `;
+
+            //     }
+
+            // }
+
+            // let casa = document.querySelector('#selectImovel')[1];
+            // let apartamento = document.querySelector('#selectImovel')[2];
+
+            // document.querySelector('#selectImovel').addEventListener('click', (e)=>{
+
+            //     if(e.target.value == 'casa'){
+            //         casa = new Casa;
+            //     } else if(e.target.value == 'apartamento'){
+            //         apartamento = new Apartamento;
+            //     } else{
+            //         return;
+            //     }
+            // })
+
+        </script>
+
+    </body>
+</html>
