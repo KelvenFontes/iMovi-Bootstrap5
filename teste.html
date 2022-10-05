@@ -75,165 +75,131 @@
                         <form>
 
                             <div>
-                                <input type="text" id="firstName" class="input" required>
-                                <label for="name" id="nameLabel" class="input-label">Primeiro nome</label>
+                                <label for="tipoImovel">Selecione o tipo de imóvel</label>
+                                <select class="form-select" aria-label="Default select example" name="tipoImovel" id="tipoImovel">
+                                    <option selected>Selecione o tipo de imóvel</option>
+                                    <option value="casa">Casa</option>
+                                    <option value="apartamento">Apartamento</option>
+                                </select>
                             </div>
 
-                            <div>
-                                <input type="text" id="lastName" class="input" required>
-                                <label for="name" class="input-label">Sobrenome</label>
+                            <div class="mb-3">
+                                <label for="numberQuartos" class="form-label">Número de quartos</label>
+                                <input type="number" class="form-control" id="numberQuartos" placeholder="Ex: 02">
                             </div>
 
-                            <div>
-                                <input type="text" id="username" class="input" required>
-                                <label for="cpf" class="input-label">Nome de usuário</label>
+                            <div id="groupQuintal">
+                                <label for="tem quinta">Possui Quintal</label>
+                                <select class="form-select" aria-label="Default select example" name="temQuintal" id="quintal">
+                                    <option selected>Tem quintal</option>
+                                    <option value="true">Sim</option>
+                                    <option value="false">Não</option>
+                                </select>
                             </div>
 
-                            <div>
-                                <input type="text" id="cpf" class="input" required>
-                                <label for="cpf" class="input-label">CPF</label>
-                            </div>
-                        
-                            <div>
-                                <input type="email" id="email" class="input" required>
-                                <label for="name" class="input-label">Email</label>
+                            <div class="mb-3">
+                                <label for="valor" class="form-label">Valor do Imovel</label>
+                                <input type="number" class="form-control" id="valor" placeholder="Valor Imovel">
                             </div>
 
+                            <div class="mb-3" id="groupCondominio">
+                                <label for="condominio" class="form-label">Valor Condominio</label>
+                                <input type="number" class="form-control" id="condominio" placeholder="Valor do Condominio/Mês">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="endereco" class="form-label">Endereço</label>
+                                <input type="text" class="form-control" id="endereco" placeholder="Ex: Rua brasil, 46, Osasco, São Paulo">
+                            </div>
                             
-                            <!-- <div>
-                                <input type="text" id="CEP" class="input" required>
-                                <label for="name" class="input-label">CEP</label>
-                            </div>
-
-                            <div>
-                                <input type="text" id="cidade" class="input" required>
-                                <label for="name" class="input-label">Cidade</label>
-                            </div>
-
-                            <div>
-                                <input type="text" id="estado" class="input" required>
-                                <label for="name" class="input-label">Estado</label>
-                            </div> -->
-
-                            <div>
-                                <input type="text" id="senha" class="input" required>
-                                <label for="name" class="input-label">Senha</label>
-                            </div>
-
-                            <!-- <div>
-                                <input type="text" id="confirmarSenha" class="input" required>
-                                <label for="name" class="input-label">Comfirmar senha</label>
-                            </div> -->
-
-                            <button type="submit" id="btnSubmit">Cadastre-se</button>
+                            <button type="submit" id="btnEnviar">Cadastrar imóvel</button>
 
                         </form>
 
-                        <!-- <p>Cadastrar com:</p>
-                        <i class="bi bi-google"></i>
-                        <i class="bi bi-facebook"></i> -->
-
-                        <!-- <p>Você é empresa <a href="./cadastro.html">cadastre-se gratis aqui.</a></p> -->
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="" id="cadastro">
-            <div class="">
-                <form>
-
-                    <label for="">Qual é o tipo do seu imovel ?</label>
-                    <br>
-                    <select name="imovel" id="selectImovel">
-                        <option value="aparente">teste</option> <!-- deixar sem selecionar -->
-                        <option value="casa">Casa</option>
-                        <option value="apartamento">Apartamento</option>
-                    </select>
-
-                    <br>
-
-                    <label for="">quantidade quartos</label>
-                    <br>
-                    <select name="imovel" id="selectImovel">
-                        <option value="casa">1</option>
-                        <option value="apartamento">2</option>
-                    </select>
-
-                    <br>
-
-                    <label for="">Vagas de Carro</label>
-                    <br>
-                    <select name="imovel" id="selectImovel">
-                        <option value="casa">sim</option>
-                        <option value="apartamento">Não</option>
-                    </select>
-
-                    <br>
-
-                    <label for="">Rua</label>
-                    <br>
-                    <input type="text">
-                    <br>
-
-                    <label for="">Numero°</label>
-                    <br>
-                    <input type="text">
-                    <br>
-
-                    <label for="">cidade</label>
-                    <br>
-                    <input type="text">
-                    <br>
-
-                    <label for="">Estado</label>
-                    <br>
-                    <input type="text">
-                    <br>
-
-                    <div id="modify">
-                        
-                    </div>
-
-                    
-                    <label for="">imagem</label>
-                    <br>
-                    <input type="file">
-
-                    <br>
-
-                    
-                    <label for="">Valor</label>
-                    <br>
-                    <input type="text">
-
-                    <button type="submit">Criar anuncio</button>
-
-                </form>
-
-            </div>
-        </div>
-
+ 
         <script>
+            // Varivables
+            let tipoImovel = document.querySelector("#tipoImovel");
 
-            function logar(){
+            let quantidadeQuartos = document.querySelector('#numberQuartos');
+            let valor = document.querySelector('#valor');
+            let endereco = document.querySelector('#endereco');
+            
+            let temQuintal = document.querySelector('#quintal');
+            let valorCondominio = document.querySelector('#condominio');
 
-                let httpAPI = fetch(`http://34.203.27.186:8090/api/v1/user?username=${username.value}`)
-                    .then(response => {
-                        if(!reponse.ok){
-                            throw new Error("Erro na Solicitação")
+            // Listener of Submit envent in Form
+            document.querySelector('form').addEventListener('submit', (event)=>{
+                event.preventDefault();
+                cadastrarImovel();
+            });
+
+            // Change visibility between APARTAMENTO or CASA
+            tipoImovel.addEventListener('click', (e)=> {
+                        console.log(e.target.value)
+                    if(e.target.value.toUpperCase() === "APARTAMENTO"){
+                        document.querySelector('#groupCondominio').style.display = "block";
+                        document.querySelector('#groupQuintal').style.display = "none";
+                  
+                    } else if(e.target.value.toUpperCase() === "CASA"){
+                        document.querySelector('#groupCondominio').style.display = "none";
+                        document.querySelector('#groupQuintal').style.display = "block";
+                    }
+             })
+
+            // Send values to API for register
+            function cadastrarImovel(){
+                let requestURL = "http://34.203.27.186:8090/api/v1/";
+                let body;
+
+                if(tipoImovel.value != null && tipoImovel.value.toUpperCase() === "APARTAMENTO"){
+                    requestURL += "apartamento";
+                    body =  {
+                        data: {
+                            id: "",
+                            quantidadeQuartos: quantidadeQuartos.value,
+                            valor: valor.value,
+                            endereco: endereco.value,
+                            temQuintal: temQuintal.value
                         }
-                        return response.json();
-                    })
-                    .then(response =>{
-                        let obj = response["data"][0];
-                        console.log(obj['username']);
-                    })
-                    .catch(error => {
-                        console.log(error);
-                        alert("Houve um erro ao realizar o Processo. Tente Novamente")
-                    })
+                    };
+                }
+                else if(ipoImovel.value != null && tipoImovel.value.toUpperCase() === "CASA"){
+                    requestURL += "casa";
+                    body =  {
+                        data: {
+                            id: "",
+                            quantidadeQuartos: quantidadeQuartos.value,
+                            valor: valor.value,
+                            endereco: endereco.value,
+                            valorCondominio: valorCondominio.value
+                        }
+                    };
+                } else{
+                    alert("Tipo de Imovel não Encontrado. Tente Novamente !");
+                    return;
+                }
+
+                let httpAPI = fetch(requestURL,{
+                    method: "POST",
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(body)
+                })
+                .then(response => {
+                    if(!response.ok) throw new Error("Erro na Solicitação");
+                    return response.json();
+                })
                 
+                //pegando json
+                .then(response => console.debug(response["data"]))
+                .catch(error => {
+                    console.log(error);
+                    alert("Houve um erro ao realizar o Processo. Tente Novamente")
+                })
             }
 
 
@@ -244,118 +210,35 @@
 
 
 
-            // class Imovel {
-            //     constructor(qtdQuart){
-            //         this.quartos(qtdQuart);
-            //     }
-
-            //     quartos(qtd){
-            //         if(qtd == 1){
-            //             console.log('1 quartos')
-            //         } else{
-            //             console.log('+ quartos')
-            //         }
-            //     }
-
-            // }
-
-            // class Casa extends Imovel{
-
-            //     constructor(){
-            //         super();
-            //         this.initialize();
-            //     }
-
-                
-            //     initialize(teste){
-            //         let modify = document.querySelector('#modify');
-
-            //         modify.innerHTML= 
-            //         `
-            //             <label for="">quintal</label>
-            //             <br>
-            //             <select name="imovel" id="selectImovel">
-            //                 <option value="casa">1</option>
-            //                 <option value="apartamento">2</option>
-            //             </select>
-            //         `;
-
-            //     }
-
-            // }
-
-            // class Apartamento extends Imovel{
-
-            //     constructor(){
-            //         super();
-            //         this.initialize();
-            //     }
 
 
-            //     initialize(teste){
-            //         let modify = document.querySelector('#modify');
 
-            //         modify.innerHTML= 
-            //         `
-            //             <label for="">condominio</label>
-            //             <br>
-            //             <select name="imovel" id="selectImovel">
-            //                 <option value="casa">1</option>
-            //                 <option value="apartamento">2</option>
-            //             </select>
 
-            //             <br>
 
-            //             <label for="">apto</label>
-            //             <br>
-            //             <select name="imovel" id="selectImovel">
-            //                 <option value="casa">1</option>
-            //                 <option value="apartamento">2</option>
-            //             </select>
 
-            //             <br>
 
-            //             <label for="">bloco</label>
-            //             <br>
-            //             <select name="imovel" id="selectImovel">
-            //                 <option value="casa">1</option>
-            //                 <option value="apartamento">2</option>
-            //             </select>
-
-            //             <br>
-
-            //             <label for="">N° apto</label>
-            //             <br>
-            //             <select name="imovel" id="selectImovel">
-            //                 <option value="casa">1</option>
-            //                 <option value="apartamento">2</option>
-            //             </select>
-
-            //             <br>
-
-            //             <label for="">valor do condominio</label>
-            //             <br>
-            //             <input type="text">
-
-            //         `;
-
-            //     }
-
-            // }
-
-            // let casa = document.querySelector('#selectImovel')[1];
-            // let apartamento = document.querySelector('#selectImovel')[2];
-
-            // document.querySelector('#selectImovel').addEventListener('click', (e)=>{
-
-            //     if(e.target.value == 'casa'){
-            //         casa = new Casa;
-            //     } else if(e.target.value == 'apartamento'){
-            //         apartamento = new Apartamento;
-            //     } else{
-            //         return;
-            //     }
-            // })
+            <div class="col-12 col-lg-8 card center" id="viewVagas">
+                <div class="row">
+                    <div class="col-12 col-md-6 cardVagas">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title primary-color">Desenvolvedor Front</h5>
+                                <p class="card-text secondary-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-dark">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 cardVagas">
+                        <div class="card text-center">
+                            <div class="card-body">
+                                <h5 class="card-title primary-color">Desenvolvedor Front</h5>
+                                <p class="card-text secondary-color">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+                                <a href="#" class="btn btn-dark">Saber Mais</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
 
         </script>
 
